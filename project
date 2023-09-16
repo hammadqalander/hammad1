@@ -1,0 +1,698 @@
+
+//personal message
+
+var userName:string = "Hammad"
+var msg:string = "Hello Hammad"
+console.log(userName,"Personal Message;",msg)
+
+// Name Cases
+
+const personName: string = "john doe";
+
+const lowercaseName: string = personName.toLowerCase();
+
+
+const uppercaseName: string = personName.toUpperCase();
+
+
+function toTitleCase(str: string): string {
+  return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+}
+
+const titleCaseName: string = toTitleCase(personName);
+
+console.log("Original Name: " + personName);
+console.log("Lowercase Name: " + lowercaseName);
+console.log("Uppercase Name: " + uppercaseName);
+console.log("Title Case Name: " + titleCaseName);
+
+//quote 
+
+var quote:string= "Imagination is more important than knowledge."
+
+console.log("Albert einstein once said;",quote)
+
+
+
+
+
+// Quote from a famous person
+
+var famous_Person:string = "Albert Einstein"
+var quote:string = "Imagination is more important than knowledge."
+
+console.log(famous_Person, "once said;",quote)
+
+//stripping names
+
+const personNameWithWhitespace1: string = "\tJohn Doe\n";
+
+console.log("Name with Whitespace: '" + personNameWithWhitespace1 + "'");
+
+const cleanedPersonName1: string = personNameWithWhitespace1.trim();
+console.log("Cleaned Name: '" + cleanedPersonName1 + "'");
+
+// Addition
+const additionResult: number = 5 + 3;
+console.log("Addition Result: " + additionResult);
+
+// Subtraction
+const subtractionResult: number = 10 - 2;
+console.log("Subtraction Result: " + subtractionResult);
+
+// Multiplication
+const multiplicationResult: number = 4 * 2;
+console.log("Multiplication Result: " + multiplicationResult);
+
+// Division
+const divisionResult: number = 16 / 2;
+console.log("Division Result: " + divisionResult);
+
+// number 8
+
+console.log(5 + 3);
+console.log(10 - 2);
+console.log(4 * 2);
+console.log(16 / 2);
+//9
+// Store your favorite number in a variable
+const favoriteNumber: number = 7;
+
+// Create a message to reveal your favorite number
+const message: string = `My favorite number is ${favoriteNumber}.`;
+
+// Print the message
+console.log(message);
+
+//10
+//program 1
+
+// This program calculates the area of a circle given its radius.
+
+// Define the radius of the circle
+const radius: number = 5;
+
+// Calculate the area of the circle using the formula A = π * r^2
+const pi: number = 3.14159;
+const area: number = pi * Math.pow(radius, 2);
+
+// Print the calculated area
+console.log(`The area of the circle with radius ${radius} is ${area}.`);
+
+
+// program 2
+
+// This program stores a person's name with whitespace, prints it with and without whitespace.
+
+// Store the person's name with whitespace
+const personNameWithWhitespace2: string = "\tJohn Doe\n";
+
+// Print the name with whitespace
+console.log("Name with Whitespace: '" + personNameWithWhitespace2 + "'");
+
+// Strip the whitespace and print the cleaned name
+const cleanedPersonName2: string = personNameWithWhitespace2.trim();
+console.log("Cleaned Name: '" + cleanedPersonName2 + "'");
+
+
+//11 Names in a array
+
+// Create an array called "names" to store your friends' names
+const names1: string[] = ["Alice", "Bob", "Charlie", "David"];
+
+// Loop through the array and print each person's name
+for (const name of names1) {
+  console.log(name);
+}
+
+
+//12 greetings
+
+// Create an array called "names" to store your friends' names
+const names: string[] = ["Alice", "Bob", "Charlie", "David"];
+
+// Loop through the array and print a personalized message to each person
+for (const name of names) {
+  console.log(`Hello, ${name}! Have a great day.`);
+}
+
+
+// 13 your own Array
+
+// Create an array to store examples of transportation modes
+const transportationModes: string[] = ["Car", "Bicycle", "Train", "Bus", "Motorcycle"];
+
+// Print statements about each transportation mode
+for (const mode of transportationModes) {
+  console.log(`I like ${mode}s because they are efficient and eco-friendly.`);
+}
+
+
+// 14   guest list
+
+
+// Create an array to store the names of people to invite
+const invitees: string[] = ["Albert Einstein", "Marie Curie", "Leonardo da Vinci"];
+
+// Loop through the array and print an invitation message to each person
+for (const person of invitees) {
+  console.log(`Dear ${person},\nYou are cordially invited to dinner. Please join us for an evening of great food and conversation.\nSincerely,\n[Your Name]`);
+}
+
+
+//15 changing guest list
+
+// Create an array to store the names of people to invite
+const invitees1: string[] = ["Albert Einstein", "Marie Curie", "Leonardo da Vinci"];
+
+// Remove the guest who can't make it
+const guestWhoCantMakeIt: string = "Marie Curie";
+const indexOfGuestWhoCantMakeIt: number = invitees1.indexOf(guestWhoCantMakeIt);
+
+if (indexOfGuestWhoCantMakeIt !== -1) {
+  invitees1.splice(indexOfGuestWhoCantMakeIt, 1);
+}
+
+// Add a new guest
+const newGuest: string = "Isaac Newton";
+invitees1.push(newGuest);
+
+// Loop through the updated array and print invitation messages
+for (const person of invitees1) {
+  console.log(`Dear ${person},\nYou are cordially invited to dinner. Please join us for an evening of great food and conversation.\nSincerely,\n[Your Name]`);
+}
+
+
+//16 more guests
+
+// Create an array to store the names of people to invite
+const invitees2: string[] = ["Albert Einstein", "Marie Curie", "Leonardo da Vinci"];
+
+// Print the guest who can't make it
+const guestWhoCantMakeIt1: string = "Marie Curie";
+console.log(`${guestWhoCantMakeIt1} can't make it to the dinner.`);
+
+// Remove the guest who can't make it
+const indexOfGuestWhoCantMakeIt1: number = invitees.indexOf(guestWhoCantMakeIt1);
+if (indexOfGuestWhoCantMakeIt1 !== -1) {
+  invitees2.splice(indexOfGuestWhoCantMakeIt1, 1);
+}
+
+// Add a new guest
+const newGuest1: string = "Isaac Newton";
+invitees2.push(newGuest1);
+
+// Invite additional guests
+const additionalGuests: string[] = ["Nikola Tesla", "Ada Lovelace", "Charles Darwin"];
+
+// Since you have a bigger table, invite three more guests
+const moreGuests: string[] = ["Galileo Galilei", "Marie Curie's clone", "Grace Hopper"];
+invitees2.push(...moreGuests);
+
+// Print a message about the bigger dinner table
+console.log("Good news! We found a bigger dinner table.");
+
+// Loop through the updated array and print invitation messages
+for (const person of invitees2) {
+  console.log(`Dear ${person},\nYou are cordially invited to dinner. Please join us for an evening of great food and conversation.\nSincerely,\n[Your Name]`);
+}
+
+
+// 17  Shrinking guest list
+
+// Create an array to store the names of people to invite
+const invitees3: string[] = ["Albert Einstein", "Marie Curie", "Leonardo da Vinci", "Isaac Newton", "Nikola Tesla", "Ada Lovelace", "Charles Darwin", "Galileo Galilei", "Marie Curie's clone", "Grace Hopper"];
+
+// Print the guest who can't make it
+const guestWhoCantMakeIt2: string = "Marie Curie";
+console.log(`${guestWhoCantMakeIt2} can't make it to the dinner.`);
+
+// Remove the guest who can't make it
+const indexOfGuestWhoCantMakeIt2: number = invitees.indexOf(guestWhoCantMakeIt2);
+if (indexOfGuestWhoCantMakeIt !== -1) {
+  invitees3.splice(indexOfGuestWhoCantMakeIt2, 1);
+}
+
+// Print a message about the bigger dinner table
+console.log("Good news! We found a bigger dinner table.");
+
+// Check if we can only invite two people
+if (invitees3.length <= 2) {
+  console.log("Unfortunately, we can only invite two people for dinner.");
+}
+
+// Remove guests until only two names remain
+while (invitees3.length > 2) {
+  const removedGuest = invitees3.pop();
+  console.log(`Sorry ${removedGuest}, we can't invite you to dinner.`);
+}
+
+// Print invitations to the remaining two guests
+for (const person of invitees3) {
+  console.log(`Dear ${person},\nYou are still invited to dinner. Please join us for an evening of great food and conversation.\nSincerely,\n[Your Name]`);
+}
+
+// Remove the last two names from the list
+invitees3.splice(0, invitees3.length);
+
+// Print the empty list
+console.log("Remaining guests:", invitees3);
+
+
+// 18 seeing the world
+
+// Create an array of places to visit
+const placesToVisit: string[] = [
+    "Paris, France",
+    "Kyoto, Japan",
+    "New York City, USA",
+    "Machu Picchu, Peru",
+    "Santorini, Greece"
+  ];
+  
+  // Print the original order
+  console.log("Original Order:");
+  console.log(placesToVisit);
+  
+  // Print in alphabetical order (without modifying original)
+  console.log("\nAlphabetical Order (without modifying original):");
+  console.log([...placesToVisit].sort());
+  
+  // Verify original order is unchanged
+  console.log("\nOriginal Order (still intact):");
+  console.log(placesToVisit);
+  
+  // Print in reverse alphabetical order (without modifying original)
+  console.log("\nReverse Alphabetical Order (without modifying original):");
+  console.log([...placesToVisit].sort().reverse());
+  
+  // Verify original order is still unchanged
+  console.log("\nOriginal Order (still intact):");
+  console.log(placesToVisit);
+  
+  // Reverse the order of the list
+  placesToVisit.reverse();
+  console.log("\nReversed Order:");
+  console.log(placesToVisit);
+  
+  // Reverse the order again to get back to the original order
+  placesToVisit.reverse();
+  console.log("\nBack to Original Order:");
+  console.log(placesToVisit);
+  
+  // Sort in alphabetical order (modifies original)
+  placesToVisit.sort();
+  console.log("\nSorted in Alphabetical Order (modified original):");
+  console.log(placesToVisit);
+  
+  // Sort in reverse alphabetical order (modifies original)
+  placesToVisit.sort((a, b) => b.localeCompare(a));
+  console.log("\nSorted in Reverse Alphabetical Order (modified original):");
+  console.log(placesToVisit);
+  
+
+  // 19
+
+
+  const invitees4: string[] = ["Albert Einstein", "Marie Curie", "Leonardo da Vinci"];
+
+// Loop through the array and print an invitation message to each person
+for (const person of invitees4) {
+  console.log(`Dear ${person},\nYou are cordially invited to dinner. Please join us for an evening of great food and conversation.\nSincerely,\n[Your Name]`,"we are inviting 200 important people to the Dinner");
+}
+
+// 20 
+
+// Create an array of favorite cities
+const favoriteCities: string[] = ["New York", "Paris", "Tokyo", "London", "Sydney"];
+
+// Print the list of favorite cities
+console.log("My Favorite Cities:");
+for (const city of favoriteCities) {
+  console.log(city);
+}
+
+
+//  21
+
+// Define a type for a book
+// Define a type for a book
+type Book = {
+    title: string;
+    author: string;
+    genre: string;
+  };
+  
+  // Create an array of favorite books (represented as objects)
+  const favoriteBooks: Book[] = [
+    {
+      title: "To Kill a Mockingbird",
+      author: "Harper Lee",
+      genre: "Fiction"
+    },
+    {
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      genre: "Classic"
+    },
+    {
+      title: "Harry Potter and the Sorcerer's Stone",
+      author: "J.K. Rowling",
+      genre: "Fantasy"
+    }
+  ];
+  
+  // Print information about the favorite books
+  console.log("My Favorite Books:");
+  for (const book of favoriteBooks) {
+    console.log(`Title: ${book.title}`);
+    console.log(`Author: ${book.author}`);
+    console.log(`Genre: ${book.genre}`);
+    console.log("------------------");
+  }
+  
+
+   // 22 intentional error
+
+   const myArray: number[] = [1, 2, 3, 4, 5];
+const indexToAccess = 10; // Index out of bounds
+
+try {
+  const value = myArray[indexToAccess];
+  console.log("Value:", value);
+} catch (error) {
+  console.error("An error occurred:", error.message);
+}
+
+// Continue with the program
+console.log("Program continues...");
+
+
+//  23  conditionaal tests
+
+
+let age = 25;
+let temperature = 80;
+let isRaining = true;
+let fruit = 'apple';
+let city = 'New York';
+
+// Test 1: Is age greater than 18?
+console.log("Is age > 18? I predict True.");
+console.log(age > 18); // True
+
+// Test 2: Is temperature less than 90?
+console.log("Is temperature < 90? I predict True.");
+console.log(temperature < 90); // True
+
+// Test 3: Is it raining?
+console.log("Is it raining? I predict True.");
+console.log(isRaining); // True
+
+// Test 4: Is fruit equal to 'banana'?
+console.log("Is fruit == 'banana'? I predict False.");
+console.log(fruit == 'banana'); // False
+
+// Test 5: Is city equal to 'New York'?
+console.log("Is city == 'New York'? I predict True.");
+console.log(city == 'New York'); // True
+
+// Test 6: Is age less than or equal to 30?
+console.log("Is age <= 30? I predict True.");
+console.log(age <= 30); // True
+
+// Test 7: Is temperature greater than or equal to 70?
+console.log("Is temperature >= 70? I predict True.");
+console.log(temperature >= 70); // True
+
+// Test 8: Is it not raining?
+console.log("Is it not raining? I predict False.");
+console.log(!isRaining); // False
+
+// Test 9: Is fruit not equal to 'apple'?
+console.log("Is fruit != 'apple'? I predict False.");
+console.log(fruit != 'apple'); // False
+
+// Test 10: Is city not equal to 'Los Angeles'?
+console.log("Is city != 'Los Angeles'? I predict True.");
+console.log(city != 'Los Angeles'); // True
+
+
+// 24 more conditional tests
+
+
+let string1 = 'apple';
+let string2 = 'banana';
+let number1 = 42;
+let number2 = 7;
+let array = [1, 2, 3, 4, 5];
+
+// Tests for equality and inequality with strings
+console.log("Tests for equality and inequality with strings:");
+console.log(string1 == 'apple'); // True
+console.log(string1 != string2); // True
+console.log(string1 == 'orange'); // False
+console.log(string2 != 'banana'); // False
+
+// Tests using the lower case function
+console.log("\nTests using the lower case function:");
+console.log(string1.toLowerCase() == 'apple'); // True
+console.log(string2.toLowerCase() == 'Banana'.toLowerCase()); // True
+console.log(string1.toLowerCase() == 'Banana'.toLowerCase()); // False
+
+// Numerical tests involving equality and inequality, greater than and less than,
+// greater than or equal to, and less than or equal to
+console.log("\nNumerical tests involving numbers:");
+console.log(number1 == 42); // True
+console.log(number1 != number2); // True
+console.log(number1 > number2); // True
+console.log(number2 < number1); // True
+console.log(number1 >= 42); // True
+console.log(number2 <= 7); // True
+console.log(number1 == 7); // False
+console.log(number2 != 42); // False
+console.log(number1 < number2); // False
+console.log(number2 > 42); // False
+
+// Tests using "and" and "or" operators
+console.log("\nTests using 'and' and 'or' operators:");
+console.log(true && true); // True
+console.log(true || false); // True
+console.log(false && true); // False
+console.log(false || false); // False
+
+// Test whether an item is in an array
+console.log("\nTest whether an item is in an array:");
+console.log(array.includes(3)); // True
+console.log(array.includes(6)); // False
+
+// Test whether an item is not in an array
+console.log("\nTest whether an item is not in an array:");
+console.log(!array.includes(6)); // True
+console.log(!array.includes(2)); // False
+
+
+//25  alien color
+
+
+// Alien Colors #1
+let alien_color = 'green'; // Change the color to 'yellow' or 'red' for different results
+
+// Version 1: Passes the if test (alien_color is green)
+if (alien_color === 'green') {
+  console.log("Congratulations! You just earned 5 points for shooting the green alien.");
+}
+
+// Version 2: Fails the if test (alien_color is not green)
+if (alien_color === 'red') {
+  console.log("Congratulations! You just earned 5 points for shooting the green alien.");
+}
+
+//26 alien color 2
+
+// Alien Colors #2
+let alien_color2 = 'green'; // Change the color to 'yellow' or 'red' for different results
+
+if (alien_color2 === 'green') {
+  console.log("Congratulations! You just earned 5 points for shooting the green alien.");
+} else {
+  console.log("Congratulations! You just earned 10 points.");
+}
+
+
+//27 alien color 3
+
+// /version1
+let alien_color3 = 'green';
+
+if (alien_color3 === 'green') {
+  console.log("Congratulations! You just earned 5 points for shooting the green alien.");
+} else if (alien_color3 === 'yellow') {
+  console.log("Congratulations! You just earned 10 points.");
+} else if (alien_color3 === 'red') {
+  console.log("Congratulations! You just earned 15 points.");
+}
+
+// version 2
+
+let alien_color4 = 'yellow';
+
+if (alien_color4 === 'green') {
+  console.log("Congratulations! You just earned 5 points for shooting the green alien.");
+} else if (alien_color4 === 'yellow') {
+  console.log("Congratulations! You just earned 10 points.");
+} else if (alien_color4 === 'red') {
+  console.log("Congratulations! You just earned 15 points.");
+}
+
+// version 3
+
+let alien_color5 = 'red';
+
+if (alien_color5 === 'green') {
+  console.log("Congratulations! You just earned 5 points for shooting the green alien.");
+} else if (alien_color5 === 'yellow') {
+  console.log("Congratulations! You just earned 10 points.");
+} else if (alien_color5 === 'red') {
+  console.log("Congratulations! You just earned 15 points.");
+}
+
+
+// 28 stages of life
+
+let age1:number = 30; // Change the age to test different scenarios
+
+if (age1 < 2) {
+  console.log("The person is a baby.");
+} else if (age1 >= 2 && age1 < 4) {
+  console.log("The person is a toddler.");
+} else if (age1 >= 4 && age1 < 13) {
+  console.log("The person is a kid.");
+} else if (age1 >= 13 && age1 < 20) {
+  console.log("The person is a teenager.");
+} else if (age1 >= 20 && age1 < 65) {
+  console.log("The person is an adult.");
+} else {
+  console.log("The person is an elder.");
+}
+
+// 29 favourite fruit
+
+let favorite_fruits = ['apple', 'banana', 'strawberry'];
+
+if (favorite_fruits.includes('apple')) {
+  console.log("You really like apples!");
+}
+
+if (favorite_fruits.includes('banana')) {
+  console.log("You really like bananas!");
+}
+
+if (favorite_fruits.includes('strawberry')) {
+  console.log("You really like strawberries!");
+}
+
+if (favorite_fruits.includes('kiwi')) {
+  console.log("You really like kiwis!");
+}
+
+if (favorite_fruits.includes('orange')) {
+  console.log("You really like oranges!");
+}
+
+
+//30  hello admin
+
+
+let usernames: string[] = ['admin', 'alice', 'bob', 'charlie', 'dave'];
+
+for (let username of usernames) {
+  if (username === 'admin') {
+    console.log("Hello admin, would you like to see a status report?");
+  } else {
+    console.log(`Hello ${username}, thank you for logging in again.`);
+  }
+}
+
+// 31 
+
+let usernames1: string[] = []; // Empty array
+
+if (usernames1.length === 0) {
+  console.log("We need to find some users!");
+} else {
+  for (let username of usernames1) {
+    if (username === 'admin') {
+      console.log("Hello admin, would you like to see a status report?");
+    } else {
+      console.log(`Hello ${username}, thank you for logging in again.`);
+    }
+  }
+}
+
+// 32 checking usernames
+
+// Current user list
+let current_users: string[] = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'];
+
+// New user list
+let new_users: string[] = ['Charlie', 'Frank', 'Grace', 'alice', 'Ivy'];
+
+// Loop through new_users
+for (let new_user of new_users) {
+  // Check for case-insensitive username availability
+  let isUsernameTaken = current_users.some((username) => username.toLowerCase() === new_user.toLowerCase());
+
+  if (isUsernameTaken) {
+    console.log(`Sorry, the username '${new_user}' is not available. Please choose a different username.`);
+  } else {
+    console.log(`The username '${new_user}' is available.`);
+    current_users.push(new_user); // Add the new username to the current_users list
+  }
+}
+
+//33 ordinal numbers
+
+let numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let number of numbers) {
+  let ordinal: string;
+
+  if (number === 1) {
+    ordinal = '1st';
+  } else if (number === 2) {
+    ordinal = '2nd';
+  } else if (number === 3) {
+    ordinal = '3rd';
+  } else {
+    ordinal = `${number}th`;
+  }
+
+  console.log(ordinal);
+}
+
+// 34 pizzaa
+
+let favoritePizzas: string[] = ["Pepperoni", "Margherita", "Supreme"];
+
+console.log("My favorite pizzas are:");
+
+for (let pizza of favoritePizzas) {
+  console.log(`- I like ${pizza} pizza.`);
+}
+
+console.log("I really love pizza!");
+
+
+// 35 animals
+
+let animals: string[] = ["Dog", "Cat", "Rabbit"];
+
+console.log("Common characteristic: They are all mammals.");
+
+console.log("These animals have a common characteristic:");
+for (let animal of animals) {
+  console.log(`- A ${animal.toLowerCase()} would make a great pet.`);
+}
+console.log("Any of these animals would make a great pet!");
+
